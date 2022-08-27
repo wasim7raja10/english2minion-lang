@@ -19,10 +19,64 @@ body {
 footer {
     flex-shrink: 0;
     padding: 1rem;
+    background-color: yellow;
 }
+
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+ button,
+ input,
+ optgroup,
+ select,
+ textarea {
+   font-family: inherit; /* 1 */
+   font-size: 100%; /* 1 */
+   line-height: 1.15; /* 1 */
+   margin: 0; /* 2 */
+ }
+ 
+ /**
+  * Show the overflow in IE.
+  * 1. Show the overflow in Edge.
+  */
+ 
+ button,
+ input { /* 1 */
+   overflow: visible;
+ }
+ 
+ /**
+  * Remove the inheritance of text transform in Edge, Firefox, and IE.
+  * 1. Remove the inheritance of text transform in Firefox.
+  */
+ 
+ button,
+ select { /* 1 */
+   text-transform: none;
+ }
+ 
+ /**
+  * Correct the inability to style clickable types in iOS and Safari.
+  */
+ 
+ button,
+ [type="button"],
+ [type="reset"],
+ [type="submit"] {
+   -webkit-appearance: button;
+ }
 
 footer h3 {
     text-align: center;
+}
+
+footer div {
+    margin: auto;
+    max-width: 800px;
 }
 
 nav {
@@ -30,7 +84,32 @@ nav {
 }
 
 nav h1 {
-    margin: 0;
+    margin: auto;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    max-width: 800px;
 }
+
+main {
+    padding: 0 1rem;
+    margin: auto;
+    max-width: 800px;
+}
+
+.input-section, .output-section {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    padding: 6px;
+    border: #4b5563 2px solid;
+}
+
+button {
+    background-color: yellow;
+    padding: 6px;
+}
+
