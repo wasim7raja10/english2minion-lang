@@ -1,4 +1,4 @@
-const translateBtn = document.querySelector("button");
+const form = document.querySelector("form");
 const input = document.querySelector("#input");
 const output = document.querySelector("#output");
 
@@ -11,7 +11,8 @@ const errorHandler = (error) => {
     alert("oops, try again tomorrow")
 }
 
-const clickHandler = () => {
+const submitHandler = (event) => {
+    event.preventDefault();
     const text = input.value; // taking input
 
     // calling server for processing
@@ -23,4 +24,4 @@ const clickHandler = () => {
         .catch(errorHandler)
 };
 
-translateBtn.addEventListener("click", clickHandler)
+form.addEventListener("submit", submitHandler)
