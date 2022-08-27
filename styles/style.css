@@ -103,8 +103,9 @@ main {
     gap: 10px;
 }
 
-textarea {
+textarea, #output {
     padding: 6px;
+    min-height: 60px;
     border: #4b5563 2px solid;
 }
 
