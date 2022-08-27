@@ -68,6 +68,7 @@ footer {
  [type="reset"],
  [type="submit"] {
    -webkit-appearance: button;
+   color: #4b5563;
  }
 
 footer h3 {
@@ -101,6 +102,10 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.output-section {
+    margin-bottom: 25px;
 }
 
 textarea, #output {
