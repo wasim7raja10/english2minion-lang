@@ -2,26 +2,29 @@ const form = document.querySelector("form");
 const input = document.querySelector("#input");
 const output = document.querySelector("#output");
 
-const url = "https://api.funtranslations.com/translate/minion.json"
+const url = "https://api.funtranslations.com/translate/minion.json";
 
-const getTranslationURL = input => `${url}?text=${input}`
+const getTranslationURL = (input) => `${url}?text=${input}`;
 
 const errorHandler = (error) => {
-    console.log(error);
-    alert("oops, try again tomorrow")
-}
-
-const submitHandler = (event) => {
-    event.preventDefault();
-    const text = input.value; // taking input
-
-    // calling server for processing
-    fetch(getTranslationURL(text))
-        .then(response => response.json())
-        .then(json => {
-            output.innerText = json.contents.translated;
-        })
-        .catch(errorHandler)
+  console.log(error);
+  alert("oops, try again tomorrow");
 };
 
-form.addEventListener("submit", submitHandler)
+const submitHandler = (event) => {
+  event.preventDefault();
+  const text = input.value;
+  if (text.trim() === "") {
+    input.classList.add("invalid");
+    return;
+  } else input.classList.remove("invalid");
+
+  fetch(getTranslationURL(text))
+    .then((response) => response.json())
+    .then((json) => {
+      output.innerText = json.contents.translated;
+    })
+    .catch(errorHandler);
+};
+
+form.addEventListener("submit", submitHandler);
