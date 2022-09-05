@@ -119,3 +119,6 @@ button {
     padding: 6px;
 }
 
+.invalid {
+    border: 2px solid red;
+}
