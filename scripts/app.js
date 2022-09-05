@@ -13,6 +13,7 @@ const errorHandler = (error) => {
 
 const submitHandler = (event) => {
   event.preventDefault();
+  output.innerText = "";
   const text = input.value;
   if (text.trim() === "") {
     input.classList.add("invalid");
